@@ -39,17 +39,18 @@ Logic food_court {
 
 Char (which stores info on the character's name and text color)
 
-## Special Markdown
+## Markdown
+| Markdown type | Example |
+|-|-|
+| **Dialogue** | `*my_char:"Dialogue of my character."` _Note that this will **not** include quotations when displayed._ |
+| **Variable embed** | `@(my_variable)` _Embedding a character will display their name in their color._ |
+| **Conditionals** | `?(my_variable == 10){This text will only be inserted if the statement evaluates to true.}` |
+| **Links** | `[Click here to go to my scene!](my_scene)` |
+| **Images** | `![Alt text for my image.](image.jpg)` |
 
-**Dialogue:** `*my_char:"Dialogue of my character."` _Note that this will **not** include quotations when displayed._
+### Links
 
-**Variable embed:** `@(my_variable)` _Embedding a character will display their name in their color._
-
-**Conditionals:** `?(my_variable == 10){This text will only be inserted if the statement evaluates to true.}`
-
-**Links:** `[Click here to go to my scene!](my_scene)`
-
-Links don't only lead to scenes. They can also tell to a logic object to evaluate or take in the **CONTINUE** keyword. This keyword specifies that the program should wait for you to click the link before inserting the rest of the document. Useful applications include:
+Links don't only lead to scenes. They can also tell to a logic object to evaluate, or they can take in the **CONTINUE** keyword. This keyword specifies that the program should wait for you to click the link before inserting the rest of the document. Useful applications include:
 
 ```
 You just kept [waiting...](CONTINUE) and [waiting...](CONTINUE) and [waiting...](CONTINUE) but in the end, no one showed up.
