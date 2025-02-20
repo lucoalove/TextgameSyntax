@@ -43,9 +43,9 @@ Char (which stores info on the character's name and text color)
 
 **Dialogue:** `*my_char:"Dialogue of my character."` _Note that this will **not** include quotations when displayed._
 
-**Variable embed:** `@(day)`
+**Variable embed:** `@(my_variable)` _Embedding a character will display their name in their color._
 
-**Conditionals:** `?(day == 10){Oh look, the food court opened today!}`
+**Conditionals:** `?(my_variable == 10){This text will only be inserted if the statement evaluates to true.}`
 
 **Links:** `[Click here to go to my scene!](my_scene)`
 
