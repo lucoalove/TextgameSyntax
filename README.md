@@ -2,6 +2,8 @@
 
 Scene objects support markdown.
 
+If logic elements don't specify a scene to redirect you to, they will keep you on the same scene but reload it (so that any values the scene relies on can be updated).
+
 ```
 Int day = 1
 Int energy = 5
