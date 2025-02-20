@@ -3,7 +3,8 @@
 Scene objects support markdown.
 
 ```
-Int day = 0
+Int day = 1
+Int energy = 5
 
 Scene mall {
     ![A scene of a mall.](mall.jpg)
@@ -20,6 +21,7 @@ Scene mall {
 }
 
 Logic food_court {
+    energy--
     if (day >= 10):
         food_court_open
     else:
