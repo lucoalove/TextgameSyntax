@@ -1,5 +1,7 @@
 # TextgameSyntax
 
+Basically a Twine clone.
+
 ```
 Int day = 1
 Int energy = 5
@@ -29,17 +31,23 @@ Logic food_court {
 
 ## Objects
 
-**Scene objects** support markdown.
+**Scene objects** are what is displayed to the screen. They support markdown.
 
-If **logic objects** don't specify a scene to redirect you to, they will keep you on the same scene but reload it (in case any variables the scene relies on have updated).
+**Logic objects** are intermediaries between scene objects that can evaluate conditionals and update variables. If you don't specify a scene to redirect the player to, they will keep you on the same scene but reload it (in case any variables the scene relies on have updated).
 
 ## Variables
 
 Char (which stores info on the character's name and text color)
 
-## Markdown
+## Special Markdown
 
-The **CONTINUE** keyword specifies that the program should wait for you to click its link before inserting the rest of the document. Useful applications include:
+**Variable embed:** `@(day)`
+
+**Conditionals:** `?(day == 10){Oh look, the food court opened today!}`
+
+**Links:** `[Click here to go to my scene!](my_scene)`
+
+Links don't only lead to scenes. They can also tell to a logic object to evaluate or take in the **CONTINUE** keyword. This keyword specifies that the program should wait for you to click the link before inserting the rest of the document. Useful applications include:
 
 ```
 You just kept [waiting...](CONTINUE) and [waiting...](CONTINUE) and [waiting...](CONTINUE) but in the end, no one showed up.
