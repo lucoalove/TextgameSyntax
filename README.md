@@ -4,15 +4,17 @@ Scene objects support markdown.
 
 ```
 Scene mall {
+    ![A scene of a mall.](mall.jpg)
+
     The mall, busy as usual. [day == 10|Oh look, the food court opened today!]
 
-    [Visit the food court.|food_court]
+    [Visit the food court.](food_court)
 }
 
 Logic food_court {
     if (day >= 10):
-        goto food_court_open
+        food_court_open
     else:
-        goto food_court_closed
+        food_court_closed
 }
 ```
