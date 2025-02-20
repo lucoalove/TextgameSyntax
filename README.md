@@ -6,7 +6,9 @@ Scene objects support markdown.
 Scene mall {
     ![A scene of a mall.](mall.jpg)
 
-    The mall, busy as usual. [day == 10|Oh look, the food court opened today!]
+    It's day @(day).
+
+    You enter the sliding doors of the mall, busy as usual. ?(day == 10){Oh look, the food court opened today!}
 
     [Visit the food court.](food_court)
 }
