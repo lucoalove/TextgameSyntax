@@ -41,6 +41,8 @@ Char (which stores info on the character's name and text color)
 
 ## Special Markdown
 
+**Dialogue:** `*my_char:"Dialogue of my character."` _Note that this will **not** include quotations when displayed._
+
 **Variable embed:** `@(day)`
 
 **Conditionals:** `?(day == 10){Oh look, the food court opened today!}`
@@ -54,9 +56,9 @@ You just kept [waiting...](CONTINUE) and [waiting...](CONTINUE) and [waiting...]
 ```
 
 ```
-*(stacy)"How's it going?" You hear a familiar voice call from behind you.
+*stacy:"How's it going?" you hear a familiar voice call from behind you.
 
 [Stacy!](CONTINUE)
 
-*(stacy)"Yea, it's me. Surprised?"
+*stacy:"Yea, it's me. Surprised?"
 ```
