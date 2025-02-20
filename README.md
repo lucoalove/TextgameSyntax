@@ -3,6 +3,8 @@
 Scene objects support markdown.
 
 ```
+Int day = 0
+
 Scene mall {
     ![A scene of a mall.](mall.jpg)
 
@@ -13,6 +15,8 @@ Scene mall {
     ?(day == 10){Oh look, the food court opened today!}
 
     [Visit the food court.](food_court)
+    [Visit the arcade.](arcade)
+    [Visit the bank.](bank)
 }
 
 Logic food_court {
