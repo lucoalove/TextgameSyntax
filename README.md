@@ -2,7 +2,7 @@
 
 actions can have multiple functions - changing the scene, modifying variables, etc.
 
-`my_scene.txt` (assumes `another_scene.txt` exists and variable `my_int` has been initialized)
+Here is the contents of `my_scene.html` (assumes `another_scene.html` exists and variable `my_int` has been initialized)
 ```
 <choices>
 {
@@ -19,9 +19,9 @@ actions can have multiple functions - changing the scene, modifying variables, e
   action_condition="my_int == 5"
 },
 {
-  prompt="This button will only appear at all if visible_condition evaluates to true. It will do nothing because action is empty.",
+  prompt="This button will only appear at all if prompt_condition evaluates to true. It will do nothing because action is empty.",
   action="",
-  visible_condition="my_int == 5"
+  prompt_condition="my_int == 5"
 }
 </choices>
 
