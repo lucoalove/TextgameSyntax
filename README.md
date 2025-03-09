@@ -4,10 +4,26 @@ actions can have multiple functions - changing the scene, modifying variables, e
 
 `my_scene.txt` (assumes `another_scene.txt` exists and variable `my_int` has been initialized)
 ```
-{ prompt="Clicking this will append another_scene below this scene.", action="append_scene('another_scene');" }
-{ prompt="Clicking this will clear all scenes that are currently displayed and display another_scene.", action="set_scene('another_scene');" }
-{ prompt="You can only click this if action_condition evaluates to true (it will be grayed out otherwise). It will do nothing because action is empty.", action="", action_condition="my_int == 5" }
-{ prompt="This button will only appear at all if visible_condition evaluates to true. It will do nothing because action is empty.", action="", visible_condition="my_int == 5" }
+<choices>
+{
+  prompt="Clicking this will append another_scene below this scene.",
+  action="append_scene('another_scene');"
+},
+{
+  prompt="Clicking this will clear all scenes that are currently displayed and display another_scene.",
+  action="set_scene('another_scene');"
+},
+{
+  prompt="You can only click this if action_condition evaluates to true (it will be grayed out otherwise). It will do nothing because action is empty.",
+  action="",
+  action_condition="my_int == 5"
+},
+{
+  prompt="This button will only appear at all if visible_condition evaluates to true. It will do nothing because action is empty.",
+  action="",
+  visible_condition="my_int == 5"
+}
+</choices>
 
 <p>You can put HTML code here.</p>
 ```
