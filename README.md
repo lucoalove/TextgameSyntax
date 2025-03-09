@@ -2,8 +2,6 @@
 
 basically you display a scene, and its corresponding choices appear at the bottom. then when you select a choice it (depending on the choice's action) will append a new scene below the current one, and replace the choices with that scene's choices
 
-actions can have multiple functions - changing the scene, modifying variables, etc.
-
 Here is the contents of `my_scene.html` (assumes `another_scene.html` exists and variable `my_int` has been initialized)
 ```
 <choices>
@@ -29,3 +27,9 @@ Here is the contents of `my_scene.html` (assumes `another_scene.html` exists and
 
 <p>You can put HTML code here.</p>
 ```
+
+Choices can contain the keys `prompt`, `action`, `prompt_condition`, and `action_condition` to determine how they display and their behaviour.
+- `prompt` The text the choice will display with.
+- `action` Code that runs if the choice is selected. Actions can do more than one thing - manipulate the scene (`append_scene` and `set_scene`), modify variables, etc.
+- `prompt_condition`
+- `action_condition`
