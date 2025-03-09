@@ -1,65 +1,13 @@
-# TextgameSyntax
+# Story Game Engine
 
-Basically a Twine clone.
+actions can have multiple functions - changing the scene, modifying variables, etc.
 
+`my_scene.txt` (assumes `another_scene.txt` exists and variable `my_int` has been initialized)
 ```
-Int day = 1
-Int energy = 5
+{ prompt="Clicking this will append another_scene below this scene.", action="append_scene('another_scene');" }
+{ prompt="Clicking this will clear all scenes that are currently displayed and display another_scene.", action="set_scene('another_scene');" }
+{ prompt="You can only click this if action_condition evaluates to true (it will be grayed out otherwise). It will do nothing because action is empty.", action="", action_condition="my_int == 5" }
+{ prompt="This button will only appear at all if visible_condition evaluates to true. It will do nothing because action is empty.", action="", visible_condition="my_int == 5" }
 
-Scene mall {
-    ![A scene of a mall.](mall.jpg)
-
-    It's day @(day).
-
-    You enter through the sliding doors of the mall, busy as usual.
-
-    ?(day == 10){Oh look, the food court opened today!}
-
-    [Visit the food court.](food_court)
-    [Visit the arcade.](arcade)
-    [Visit the bank.](bank)
-}
-
-Logic food_court {
-    energy--
-    if (day >= 10):
-        food_court_open
-    else:
-        food_court_closed
-}
-```
-
-## Objects
-
-**Scene objects** are what is displayed to the screen. They support markdown.
-
-**Logic objects** are intermediaries between scene objects that can evaluate conditionals and update variables. If you don't specify a scene to redirect the player to, they will keep you on the same scene but reload it (in case any variables the scene relies on have updated).
-
-## Variables
-
-Char (which stores info on the character's name and text color)
-
-## Markdown
-| Markdown type | Example |
-|-|-|
-| **Dialogue** | `*my_char:"Dialogue of my character."` _Note that this will **not** include quotations when displayed._ |
-| **Variable embed** | `@(my_variable)` _Embedding a character will display their name in their color._ |
-| **Conditionals** | `?(my_variable == 10){This text will only be inserted if the statement evaluates to true.}` |
-| **Links** | `[Click here to go to my scene!](my_scene)` |
-| **Images** | `![Alt text for my image.](image.jpg)` |
-
-### Links
-
-Links don't only lead to scenes. They can also tell to a logic object to evaluate, or they can take in the **CONTINUE** keyword. This keyword specifies that the program should wait for you to click the link before inserting the rest of the document. Useful applications include:
-
-```
-You just kept [waiting...](CONTINUE) and [waiting...](CONTINUE) and [waiting...](CONTINUE) but in the end, no one showed up.
-```
-
-```
-*stacy:"How's it going?" you hear a familiar voice call from behind you.
-
-[Stacy!](CONTINUE)
-
-*stacy:"Yea, it's me. Surprised?"
+<p>You can put HTML code here.</p>
 ```
