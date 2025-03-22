@@ -21,7 +21,7 @@ Choices must contain a `PROMPT` and a `THATDOES` keyword, and optionally a boole
 ## Imperative code
 
 The stuff inside `THATDOES` and also boolean expressions. Also in
-`<do></do>` which contains imperative code inline with HTML, such as for embedding scene content dynamically (ie. displaying variables or displaying different content within a scene depending on the value of an expression).
+`<do></do>` which contains imperative code inline with HTML, such as for embedding scene content dynamically (i.e. displaying variables or displaying different content within a scene depending on the value of an expression).
 
 can manipulate scenes, modify variables, evaluate conditions, etc.
 
@@ -35,7 +35,7 @@ can manipulate scenes, modify variables, evaluate conditions, etc.
 
 ## Example
 
-Here is the contents of `my_scene.html` (assumes `another_scene.html` exists and variable `my_int` has been initialized):
+Here is the contents of `my_scene.html` (assumes `another_scene.html` exists and variable `my_int` has been initialized).
 ```
 <choice>
   PROMPT:
@@ -52,5 +52,7 @@ Here is the contents of `my_scene.html` (assumes `another_scene.html` exists and
   THATDOES (my_int == 15):
 </choice>
 
-<p>You can put HTML code here. The value of my_int is <do>echo(my_int);</do>.</p>
+<p>You can put HTML code here.</p>
+
+<p>The value of my_int is <do>echo(my_int);</do>.</p>
 ```
