@@ -1,6 +1,8 @@
 # Textgame Syntax
 
-all game data is stored in the url as media queries, ex. `example.com?scene=my_scene&hp=10`
+https://en.wikipedia.org/wiki/Hypertext_fiction
+
+All game data is stored in the url as media queries, ex. `https:/example.com/?scene=my_scene&hp=10`. This makes cheating trivial.
 
 Basically you display a scene, and its corresponding choices appear at the bottom. Then when you select a choice it runs some code; in most cases this will append a new scene below the current one, maybe change some variables, and replace the choices with the new scene's choices.
 
