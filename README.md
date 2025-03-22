@@ -10,11 +10,15 @@ The syntax is split into two parts: **Markup code** and **imperative code**.
 
 ## Markup code
 
+HTML you want displayed for each scene and also the available choices.
+
 Here is the contents of `my_scene.html` (assumes `another_scene.html` exists and variable `my_int` has been initialized):
 ```
 <choice>
-  PROMPT: Selecting this choice will append another_scene below this scene.
-  THATDOES: load_scene('another_scene');
+  PROMPT:
+    Selecting this choice will append another_scene below this scene.
+  THATDOES:
+    load_scene('another_scene');
 </choice>
 
 <choice>
