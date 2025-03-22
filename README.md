@@ -30,7 +30,7 @@ Choices must contain a `PROMPT` and a `THATDOES` keyword, and optionally a boole
 - `THATDOES` Code that runs if the choice is selected.
   - If provided a boolean statement, the choice will only be selectable if it evaluates to true, otherwise, the choice will be grayed out.
 
-What hasn't been planned is dynamic scene content (i.e. having the same layout for 10 different random encounters).
+What hasn't been planned is dynamic scene content (ie. displaying variables or displaying different content within a scene depending on the value of an expression).
 
 ## Functional code
 
