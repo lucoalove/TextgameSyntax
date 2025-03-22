@@ -12,7 +12,15 @@ The syntax is split into two parts: **Markup code** and **imperative code**.
 
 HTML you want displayed for each scene and also the available choices.
 
-Here is the contents of `my_scene.html` (assumes `another_scene.html` exists and variable `my_int` has been initialized):
+Choices must contain a `PROMPT` and a `THATDOES` keyword, and optionally a boolean expression for either (or both) to determine how the prompt displays and its behaviour.
+- `PROMPT` The text the choice will display with.
+  - If provided a boolean expression, the choice will only appear if it evaluates to true, otherwise, the choice will not appear.
+- `THATDOES` Code that runs if the choice is selected.
+  - If provided a boolean expression, the choice will only be selectable if it evaluates to true, otherwise, the choice will be grayed out.
+
+`<c>` is for running code inline with HTML, such as for embedding scene content dynamically (ie. displaying variables or displaying different content within a scene depending on the value of an expression).
+
+As an example, here is the contents of `my_scene.html` (assumes `another_scene.html` exists and variable `my_int` has been initialized):
 ```
 <choice>
   PROMPT:
@@ -29,16 +37,8 @@ Here is the contents of `my_scene.html` (assumes `another_scene.html` exists and
   THATDOES (my_int == 15):
 </choice>
 
-<p>You can put HTML code here.</p>
+<p>You can put HTML code here. The value of my_int is <c>echo(my_int);</c>.</p>
 ```
-
-Choices must contain a `PROMPT` and a `THATDOES` keyword, and optionally a boolean expression for either (or both) to determine how the prompt displays and its behaviour.
-- `PROMPT` The text the choice will display with.
-  - If provided a boolean expression, the choice will only appear if it evaluates to true, otherwise, the choice will not appear.
-- `THATDOES` Code that runs if the choice is selected.
-  - If provided a boolean expression, the choice will only be selectable if it evaluates to true, otherwise, the choice will be grayed out.
-
-What hasn't been planned is dynamic scene content (ie. displaying variables or displaying different content within a scene depending on the value of an expression).
 
 ## Imperative code
 
@@ -51,3 +51,5 @@ can manipulate scenes, modify variables, evaluate conditions, etc.
 `load_scene(scene_name)` / Changes the scene that is displayed to the given scene.
 
 `reload_scene()` / Reloads the current scene. Has the same effect as calling `load_scene` with the current scene as the parameter.
+
+`echo(html)` / Inserts the parameter (a string representing HTML) into the document.
