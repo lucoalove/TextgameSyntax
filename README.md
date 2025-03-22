@@ -14,7 +14,10 @@ Here is the contents of `my_scene.html` (assumes `another_scene.html` exists and
 </choice>
 
 <choice>
-  PROMPT This choice 1) will only appear if the first IF evaluates to true and 2) can only be selected if the second IF evaluates to true (it will be grayed out otherwise). It will do nothing because THATDOES is empty.
+  PROMPT
+    This choice 1) will only appear if the first IF evaluates to true and
+    2) can only be selected if the second IF evaluates to true (it will
+    be grayed out otherwise). It will do nothing because THATDOES is empty.
   IF my_int > 10
   THATDOES
   IF my_int == 15
