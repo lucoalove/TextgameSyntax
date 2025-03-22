@@ -14,7 +14,7 @@ Here is the contents of `my_scene.html` (assumes `another_scene.html` exists and
 ```
 <choice>
   PROMPT: Selecting this choice will append another_scene below this scene.
-  THATDOES: append_scene('another_scene');
+  THATDOES: load_scene('another_scene');
 </choice>
 
 <choice>
@@ -46,4 +46,4 @@ can manipulate scenes, modify variables, evaluate conditions, etc.
 
 `load_scene(scene_name)` / Changes the scene that is displayed to the given scene.
 
-`reload_scene` / Reloads the current scene. Has the same effect as calling `load_scene` with the current scene as the parameter.
+`reload_scene()` / Reloads the current scene. Has the same effect as calling `load_scene` with the current scene as the parameter.
