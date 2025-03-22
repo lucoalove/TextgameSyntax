@@ -6,7 +6,7 @@ All game data is stored in the url as media queries, ex. `https:/example.com/?sc
 
 Basically you display a scene, and its corresponding choices appear at the bottom. Then when you select a choice it runs some code; in most cases this will change the scene, maybe change some variables, and replace the choices with the new scene's choices.
 
-The syntax is split into two parts: **Functional code** and **markup code**.
+The syntax is split into two parts: **Markup code** and **imperative code**.
 
 ## Markup code
 
@@ -36,7 +36,7 @@ Choices must contain a `PROMPT` and a `THATDOES` keyword, and optionally a boole
 
 What hasn't been planned is dynamic scene content (ie. displaying variables or displaying different content within a scene depending on the value of an expression).
 
-## Functional code
+## Imperative code
 
 The stuff inside `THATDOES` and also boolean expressions
 
