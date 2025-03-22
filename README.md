@@ -18,7 +18,7 @@ Choices must contain a `PROMPT` and a `THATDOES` keyword, and optionally a boole
 - `THATDOES` Code that runs if the choice is selected.
   - If provided a boolean expression, the choice will only be selectable if it evaluates to true, otherwise, the choice will be grayed out.
 
-`<c>` is for running code inline with HTML, such as for embedding scene content dynamically (ie. displaying variables or displaying different content within a scene depending on the value of an expression).
+`<do></do>` contains imperative code inline with HTML, such as for embedding scene content dynamically (ie. displaying variables or displaying different content within a scene depending on the value of an expression).
 
 As an example, here is the contents of `my_scene.html` (assumes `another_scene.html` exists and variable `my_int` has been initialized):
 ```
@@ -37,7 +37,7 @@ As an example, here is the contents of `my_scene.html` (assumes `another_scene.h
   THATDOES (my_int == 15):
 </choice>
 
-<p>You can put HTML code here. The value of my_int is <c>echo(my_int);</c>.</p>
+<p>You can put HTML code here. The value of my_int is <do>echo(my_int);</do>.</p>
 ```
 
 ## Imperative code
