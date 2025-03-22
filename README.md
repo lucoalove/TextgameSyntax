@@ -40,7 +40,7 @@ What hasn't been planned is dynamic scene content (ie. displaying variables or d
 
 The stuff inside `THATDOES` and also boolean expressions
 
-(, `set_scene`, and `reload_scene`), modify variables, evaluate conditions, etc.
+can manipulate scenes, modify variables, evaluate conditions, etc.
 
 ### Built-in functions
 
